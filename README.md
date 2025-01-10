@@ -1,2 +1,2 @@
-# Family-Travel-Tracker
-This is the website where the family members keep the record of the countries they have visited in the database and display in the world map.(still adding some additional features)
+# JourneyQuest
+It’s a simple database project using PostgresSQL where we keep track of the countries visited by the users and display the same in the world map by highlighting the country.(still adding some additional features)
