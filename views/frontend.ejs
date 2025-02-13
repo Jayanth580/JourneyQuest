@@ -1,0 +1,83 @@
+
+
+      <%-include("partials/header.ejs") %>
+    <!-- Body Section -->
+    <main>
+        <!-- Home Section -->
+        <div class="px-4 pt-5 text-center border-bottom custom-bg" >
+            <div class="title-box" style="color: white;">
+            <h1 class="display-4 fw-bold ">Welcome to JourneyQuest</h1>
+            <div class="col-lg-6 mx-auto">
+              <p class="lead mb-4">Your quest for the perfect escape begins here</p>
+              <form action="/getstart" method="GET">
+              <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+                <a href="http://127.0.0.1:5000" class="icon-link" style="font-size: 20px;">
+                  Book a flight
+                  <svg class="bi"><use xlink:href="#chevron-right"></use></svg>
+                </a>
+                <button type="submit" class="btn btn-primary btn-lg px-4 me-sm-3" fdprocessedid="hllcfw">Get Started</button>
+              </div>
+            </form>
+            </div>
+            </div> 
+        </div>
+
+        <!-- About Section with Background Image -->
+        <div id="about" class="row flex-lg-row-reverse align-items-center g-5 py-5 about">
+            <div class="col-10 col-sm-8 col-lg-6">
+              <img src="./friends-planning-trip-stockcake.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="500" height="300" loading="lazy">
+            </div>
+            <div class="col-lg-6 ">
+              <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">About</h1>
+              <p class="lead">We are dedicated to helping travelers preserve and celebrate their unforgettable experiences from around the world.
+                Our platform provides an innovative space where individuals can store, share, and relive the memories of the countries
+                they’ve visited. With a focus on simplicity and creativity, our team works to ensure that every journey is captured
+                in a way that brings lasting value and inspires future adventures.
+              </p> 
+            </div>
+        </div>
+
+        <div id="Upload"class="container col-xl-10 col-xxl-8 px-4 py-5 ">
+          <div class="row align-items-center g-lg-5 py-5">
+            <div class="col-lg-7 text-center text-lg-start">
+              <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3" style="font-size: 50px;">Upload the images</h1>
+              <p class="lead">The Upload section allows users to easily upload and store their travel images, providing a secure and efficient way 
+                to preserve their memories. Travelers can share their experiences by uploading photos, ensuring their journeys are captured and stored 
+                for future reference, all within a user-friendly and seamless platform.
+              </p>
+            </div>
+            <div class="col-md-10 mx-auto col-lg-5 upload-div">
+              <form action="/upload" method="post" enctype="multipart/form-data"  class="p-4 p-md-5 border rounded-3  form-div">
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="" fdprocessedid="ablbu" name="country">
+                  <label for="floatingInput">Visited Country</label>
+                </div>
+                <div class="form-floating mb-3">
+                  <input type="text" class="form-control" id="floatingInput" placeholder="" fdprocessedid="ablbu" name="username">
+                  <label for="floatingInput">Username</label>
+                </div>
+                <input type="file" name="Uploadimage" style="margin-bottom: 15px;">
+                <button class="w-100 btn btn-lg btn-primary" type="submit" fdprocessedid="0kyh2a">Upload</button>
+                <!-- <hr class="my-4">
+                <small class="text-body-secondary">By clicking upload, you agree to the add the image.</small> -->
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <div id="views"class="px-4 py-5 my-5 text-center">
+          <h1 class="display-5 fw-bold text-body-emphasis">View Images</h1>
+          <div class="col-lg-6 mx-auto">
+            <p class="lead mb-4">The View section enables users to browse their uploaded images, categorized by the countries they've visited.
+               It offers a seamless way to explore and revisit travel memories, allowing users to view photos from specific destinations and 
+               share their experiences.</p>
+            <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+              <form action="/images" method="GET">
+              <button type="submit" class="btn btn-primary btn-lg px-4 gap-3" fdprocessedid="aebcbi">view</button>
+            </form>
+            </div>
+          </div>
+        </div>
+
+    </main>
+<%- include("partials/footer.ejs") %>
